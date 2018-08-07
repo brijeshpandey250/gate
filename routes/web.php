@@ -11,9 +11,9 @@
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
+});
 
 //use App\Person\Person;
 
@@ -28,11 +28,8 @@ app()->bind('name', function() {
 });
 
 
-Route::get('/', function () {
-
-    /*$person = new Person();
-    echo $person->getName();*/
-
+/*Route::get('/', function () {
+    $person = new Person();
+    echo $person->getName();
     return William::getName();
-
-});
+});*/
