@@ -11,12 +11,28 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+//use App\Person\Person;
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/private', 'HomeController@private')->name('private');
+
+app()->bind('name', function() {
+    return new \App\Person\Person;
+});
+
+
+Route::get('/', function () {
+
+    /*$person = new Person();
+    echo $person->getName();*/
+
+    return William::getName();
+
+});
